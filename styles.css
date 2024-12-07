@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+
+    /* Primary */
+    --soft-red: hsl(2, 61%, 65%);
+    --strong-cyan: hsl(172, 67%, 45%);
+
+    /* Neutral */
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    background-color: var(--light-grayish-cyan);
+    font-family: "Space Mono", monospace;
+}
+
+header {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--very-dark-cyan);
+    font-size: .8rem;
+}
+
+main {
+    min-height: 400px;
+    max-height: none;
+    /* Default behavior */
+    width: 70%;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: var(--white);
+}
+
+
+.bill {
+    grid-area: bill;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.billInputCover {
+    border-radius: 4px;
+    height: 45px;
+    background-color: var(--very-light-grayish-cyan);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.billInputCover input,
+.peopleInput {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    padding: 5px;
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Space Mono", monospace;
+    width: 80%;
+
+}
+
+.billIcon {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.selectTip {
+    grid-area: tip;
+}
+
+.numOfPeople {
+    grid-area: nop;
+}
+
+.inputSection {
+    row-gap: 25px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "bill bill bill"
+        "tip tip tip"
+        "tip tip tip"
+        "nop nop nop"
+    ;
+    height: 100%;
+    /* width: 50%; */
+}
+
+.resultSection {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+label {
+    font-size: .9rem;
+    color: var(--dark-grayish-cyan);
+
+    font-weight: 600;
+
+}
+
+
+
+input[type="number"] {
+    text-align: end;
+    -moz-appearance: textfield;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    /* Modern Browsers */
+    margin: 0;
+    /* Remove extra margin on certain browsers */
+}
+
+/* For WebKit browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tipButtons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tipButtons button:hover {
+    cursor: pointer;
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+}
+
+.tipButtons input:focus {
+    outline: 2px solid var(--strong-cyan);
+
+}
+
+.selectTip {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tipButtons button,
+.tipButtons input {
+    width: 100%;
+    ;
+    font-size: 20px;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    font-weight: 600;
+    font-family: "Space Mono", monospace;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+.tipButtons input {
+    padding: 8px;
+    color: var(--very-dark-cyan);
+    background-color: var(--very-light-grayish-cyan);
+    text-align: right;
+
+}
+
+.tipButtons input::placeholder {
+    text-align: center;
+    font-size: 20px;
+    color: var(--dark-grayish-cyan);
+    font-family: "Space Mono", monospace;
+}
+
+.numOfPeople {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.peopleInputCover {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    background-color: var(--very-light-grayish-cyan);
+    border-radius: 4px;
+}
+
+.peopleLogo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.peopleInput {
+    height: 100%;
+    background-color: transparent;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+.childRs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-radius: 15px;
+    padding: 30px;
+    color: var(--white);
+    width: 100%;
+    background-color: var(--very-dark-cyan);
+}
+
+.tipTotalContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tipTotalText h2 {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.tipTotalText span {
+    color: var(--grayish-cyan);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tipTotalAmount h1 {
+    font-size: 2.5rem;
+    color: var(--strong-cyan);
+    font-weight: 600;
+
+}
+
+.reset {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Space Mono", monospace;
+    outline: none;
+    border: none;
+    opacity: 20%;
+}
+
+.attributionOne {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--very-dark-cyan);
+}
+.attributionOne a{
+    text-decoration: none;
+    color: var(--soft-red);
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+@media(max-width:540px) {
+    header {
+        margin-bottom: 30px;
+    }
+
+    body {
+        height: auto;
+        padding-top: 50px;
+        gap: 0px;
+    }
+
+    main {
+        width: auto;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .childRs {
+        gap: 50px;
+    }
+
+    .tipButtons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tipButtons button {
+        height: 60px;
+        font-size: 1.7rem;
+    }
+
+    .tipButtons input {
+        height: 60px;
+        font-size: 1.7rem;
+    }
+
+    .attribution {
+        margin-bottom: 20px;
+        font-size: 10px;
+        color: var(--very-dark-cyan);
+        text-align: center;
+    }
+    .attribution a{
+        text-decoration: none;
+        color: var(--soft-red);
+        font-weight: 600;
+        cursor: pointer;
+
+    }
+}
+
+.none {
+    display: none;
+}

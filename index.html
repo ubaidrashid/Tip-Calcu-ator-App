@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="" />
+    </header>
+    <main>
+      <div class="inputSection">
+        <div class="bill">
+          <label for="Bill">Bill</label>
+          <div class="billInputCover">
+            <div class="billIcon">
+              <img src="images/icon-dollar.svg" alt="" />
+            </div>
+            <input class="billInput" type="number" placeholder="0" />
+          </div>
+        </div>
+        <div class="selectTip">
+          <label for="">Select Tip %</label>
+          <div class="tipButtons">
+            <button class="percentBtn">5%</button>
+            <button class="percentBtn">10%</button>
+            <button class="percentBtn">15%</button>
+            <button class="percentBtn">25%</button>
+            <button class="percentBtn">50%</button>
+            <input
+              type="text"
+              placeholder="Custom"
+              id="uniqueInput"
+              name=""
+              id=""
+            />
+          </div>
+        </div>
+        <div class="numOfPeople">
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+            <label for="peoples">Number of People</label>
+            <div class="error none" style="color:hsl(2, 61%, 65%);font-weight: 700;">Can't be zero</div>
+          </div>
+          <div class="peopleInputCover">
+            <div class="peopleLogo">
+              <img src="images/icon-person.svg" alt="" />
+            </div>
+            <input type="number" class="peopleInput" placeholder="0" />
+          </div>
+        </div>
+      </div>
+
+      <div class="resultSection">
+        <div class="childRs">
+          <div
+            style="width: 100%;display: flex;flex-direction: column;gap: 20px;"
+          >
+            <div class="tipTotalContainer">
+              <div class="tipTotalText">
+                <h2>Tip Amount</h2>
+                <span>/person</span>
+              </div>
+              <div class="tipTotalAmount">
+                <h1>$<span class="perPersonAmount">0.00</span></h1>
+              </div>
+            </div>
+            <div class="tipTotalContainer">
+              <div class="tipTotalText">
+                <h2>Total</h2>
+                <span>/person</span>
+              </div>
+              <div class="tipTotalAmount">
+                <h1>$<span class="perPersonAmount">0.00</span></h1>
+              </div>
+            </div>
+          </div>
+
+          <button class="reset">RESET</button>
+        </div>
+      </div>
+      <div class="attribution none">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/ubaidrashid" target="_blank">Oss Coding</a>.
+      </div>
+    </main>
+    <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+   -->
+    <div class="attributionOne">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/ubaidrashid" target="_blank">Oss Coding</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
